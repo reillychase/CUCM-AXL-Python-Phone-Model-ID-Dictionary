@@ -5,6 +5,7 @@ If you need to turn this https://communities.cisco.com/docs/DOC-46061 into a rep
 admin:run sql select enum, name from typemodel
 enum  name                                              
 ===== ================================================= 
+
 15    EMCC Base Phone                                   
 20    SCCP Phone                                        
 30    Analog Access                                     
