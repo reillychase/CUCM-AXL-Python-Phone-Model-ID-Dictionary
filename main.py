@@ -19,10 +19,7 @@ imp.filter.add(tns)
 client = Client(WSDL,location=location,faults=False,plugins=[ImportDoctor(imp)],
                 username=USERNAME,password=PASSWORD)
 result = client.service.executeSQLQuery('select enum, name from typemodel')
-phone_models = []
-for row in result[1]['return']['row']:
-    phone_model_d = {}
-    phone_model_d["id"] = row.enum
-    phone_model_d["model"] = row.name
-    phone_models.append(phone_model_d)
+phone_models = {}
+        for row in result[1]['return']['row']:
+            phone_models[row.enum] = row.name
 print phone_models
